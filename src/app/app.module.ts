@@ -9,6 +9,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { AuthComponent } from './pages/auth/auth.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { SimulatorComponent } from './pages/simulator/simulator.component';
+import { HomePageComponent } from './pages/home-page/home-page.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { SimulatorComponent } from './pages/simulator/simulator.component';
     AboutComponent,
     AuthComponent,
     NotFoundComponent,
-    SimulatorComponent
+    SimulatorComponent,
+    HomePageComponent
   ],
   imports: [
     BrowserModule,
