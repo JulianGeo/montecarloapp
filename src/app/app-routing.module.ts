@@ -4,6 +4,7 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 import { AboutComponent } from './pages/about/about.component';
 import { SimulatorComponent } from './pages/simulator/simulator.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { AuthComponent } from './pages/auth/auth.component';
 
 const routes: Routes = [
   {
@@ -23,6 +24,10 @@ const routes: Routes = [
   {
     path: 'simulator',
     component: SimulatorComponent
+  },
+  {
+    path: 'login',
+    component: AuthComponent
   },
   {
     path: '**',
