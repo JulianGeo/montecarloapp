@@ -1,1 +1,35 @@
-<p>signup-form works!</p>
+<div ngClass="form-container">
+  <form [formGroup]="signUpForm" ngClass="register">
+    <mat-form-field appearance="fill">
+      <mat-label>Name: </mat-label>
+      <input matInput type="text" placeholder="Insert name" formControlName="name" required/>
+      <div *ngIf="signUpForm.get('name')?.hasError('required') && !signUpForm.get('name')?.pristine">
+        Name is required
+      </div>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Lastname: </mat-label>
+      <input matInput type="text" placeholder="Insert last name" formControlName="lastname" required />
+      <div *ngIf="signUpForm.get('lastname')?.hasError('required') && !signUpForm.get('lastname')?.pristine">
+        Lastname is required
+      </div>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Email: </mat-label>
+      <input matInput type="email" placeholder="Insert email" formControlName="email" required/>
+      <div *ngIf="signUpForm.get('email')?.hasError('required') && !signUpForm.get('email')?.pristine">
+        Email is required
+      </div>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Password: </mat-label>
+      <input matInput type="password" placeholder="Insert password" formControlName="password" required />
+      <div *ngIf="signUpForm.get('password')?.hasError('required') && !signUpForm.get('password')?.pristine">
+        Password is required
+      </div>
+    </mat-form-field>
+    <button mat-raised-button color="primary" style="margin: 5px" [disabled]="isFormsInvalid()" (click)="onSubmit()">Register</button>
+    <button mat-raised-button color="warn" style="margin: 5px" routerLink="/main">Go back</button>
+  </form>
+</div>
+
