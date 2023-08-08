@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { SignInService } from 'src/app/services/sign-in.service';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-signin-form',
@@ -13,7 +13,7 @@ export class SigninFormComponent {
   formLogin: FormGroup;
 
   constructor(
-    private signInService: SignInService,
+    private signInService: AuthService,
     private router: Router
   ) {
     this.formLogin = new FormGroup({
