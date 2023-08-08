@@ -16,7 +16,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './modules/material/material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { SignInService } from './services/sign-in.service';
 
 @NgModule({
   declarations: [
@@ -41,7 +40,6 @@ import { SignInService } from './services/sign-in.service';
     HttpClientModule
   ],
   providers: [
-    SignInService
   ],
   bootstrap: [AppComponent]
 })

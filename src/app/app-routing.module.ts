@@ -5,6 +5,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { SimulatorComponent } from './pages/simulator/simulator.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { AuthComponent } from './pages/auth/auth.component';
+import { authGuard } from './guards/auth-guard.guard';
 
 const routes: Routes = [
   {
@@ -23,6 +24,7 @@ const routes: Routes = [
   },
   {
     path: 'simulator',
+    canActivate: [authGuard],
     component: SimulatorComponent
   },
   {
