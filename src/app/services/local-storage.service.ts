@@ -13,6 +13,14 @@ export class LocalStorageService {
     return localStorage.getItem(key);
   }
 
+  setToken (value: string) {
+    localStorage.setItem("Token", value);
+  }
+
+  getToken () {
+    return localStorage.getItem("Token");
+  }
+
   remove(key: string) {
     localStorage.removeItem(key);
   }
