@@ -13,6 +13,10 @@ export class LocalStorageService {
     return localStorage.getItem(key);
   }
 
+  remove(key: string) {
+    localStorage.removeItem(key);
+  }
+
   setToken (value: string) {
     localStorage.setItem("Token", value);
   }
@@ -21,8 +25,10 @@ export class LocalStorageService {
     return localStorage.getItem("Token");
   }
 
-  remove(key: string) {
-    localStorage.removeItem(key);
+  removeToken() {
+    localStorage.removeItem("Token");
   }
+
+
 
 }
