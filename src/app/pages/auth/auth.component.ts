@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AuthComponent {
 
+  haveAccount = true;
+
+  haveAnAccount(): void {
+    this.haveAccount = !this.haveAccount;
+  }
+
 }
